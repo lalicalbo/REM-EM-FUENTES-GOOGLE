@@ -1,0 +1,138 @@
+*{
+    box-sizing:border-box ;
+    padding:0 ;
+    margin: 0 ;
+}
+/*Font-family -- gogole.fonts....rem y em*/
+
+html{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+}
+#parrafo1{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size:1.875rem;
+    padding:4rem ;
+    margin: 0.5rem;
+    border: 2px solid red;
+
+}
+
+#parrafo2{
+    font-family: 'Style Script', cursive;
+    font-size: 0.5rem;/* 12.8*/
+    padding:4em ;
+    margin:0.5em ;
+    border: 2px solid blue;
+}
+
+.fuentes{
+    font-size: 1rem;
+    border: 2px solid violet
+}
+
+#p1{
+    font-size: 0.8em;
+}
+#p2{
+    font-size: 4em;
+}
+
+
+/*Selectores*/
+
+/*SElector de hijos*/
+.fuentes > p {
+    color: green;
+}
+/* Selector de hermanos*/
+ .fuentes p + p {
+     color: hotpink;
+ }
+ 
+
+ /* Selector de hermanos general*/
+ .fuentes p ~ p {
+     color:pink;
+ }
+
+
+ /* Selectores de atributos*
+  Esta es otra manera se seleccionar por atributos 
+ peri espracticamente los mismo*/
+ 
+ [class= "fuentes"] p ~ p {
+     background-color: indianred;
+ }
+
+
+
+/* Este selecciona a los que tengan el
+atributo id */
+ [id] {
+     border:6px solid  yellow;
+ }
+
+input[type="checkbox"]{
+    width: 100px;
+    height: 100px;
+}
+  /* Pseudoclases*/
+  
+  .padre{
+      color:blue;
+      height: 100vh;
+      padding:4rem;
+    
+  }
+  .padre span,a {
+      display:block;
+  }
+/*
+  .padre span:first-child:hover{
+      color: green;
+  }*/
+
+
+
+  .padre span:first-child:hover{
+    color:black;
+}
+
+.padre span:nth-child(2){
+    background-color: red;
+}
+ 
+  a:link{
+      color: pink;
+  }
+
+  a:visited{
+      color: green;
+  }
+
+
+  /* hover : caundo el mouse se pasa 
+  por la palabra cambia de color.
+  Active: cuando se de click en la palabra
+  cambia de color mientras siga presionado
+  focus: se usa para input ejm activa una casilla de un input text */
+
+  input[type="text"]:active{
+      background-color: red;
+  }
+
+
+  #parrafo1::first-line{
+      color: pink;
+  }
+
+  
+  #parrafo2::first-letter{
+      color: red;
+  }
+
+
+  .padre span:nth-of-type(2n +1){
+      background-color:green;
+  }
